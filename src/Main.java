@@ -40,7 +40,7 @@ public class Main {
                 saldo = saldo - valorD;
             }
             else if (opcao == 3){
-                System.out.println("Aqui fica o extrato");
+                System.out.println("Aqui fica o extrato:");
             }
             else if (opcao == 4){
                 System.out.println("O saldo atual é de: " + saldo);

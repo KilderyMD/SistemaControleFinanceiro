@@ -26,9 +26,6 @@ public class Main {
             if (opcao >= 6) {
                 System.out.println("Opção Inválida! Tente novamente...");
             }
-            else if (opcao < 1) {
-                System.out.println("Opção Inválida! Tente novamente...");
-            }
             if (opcao == 1){
                 float valorR;
                 System.out.println("Digite o valor que você quer inserir: ");

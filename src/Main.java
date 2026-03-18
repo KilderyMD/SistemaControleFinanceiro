@@ -1,5 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +7,9 @@ public class Main {
 
         int opcao = 0;
         float saldo = 0;
+        float [] extrato = new float [200];
+        int contador = 0;
+
         while (opcao != 5){
             System.out.println("===================================");
             System.out.println("Assistente Financeiro do Java");
@@ -32,20 +33,32 @@ public class Main {
                 valorR = sc.nextFloat();
                 saldo = saldo + valorR;
                 System.out.printf("O valor de %.2f foi adicionado no saldo\n", valorR);
+                extrato[contador] = valorR;
+                contador++;
             }
             else if (opcao == 2){
                 float valorD;
                 System.out.println("Digite o valor que você quer inserir: ");
                 valorD = sc.nextFloat();
-                saldo = saldo - valorD;
+
+                if (valorD < 0) {
+                    System.out.println("Opção Inválida! Adicione o valor sem menos");
+                } else {
+                    saldo = saldo - valorD;
+                    extrato[contador] = -valorD;
+                    contador++;
+                    System.out.printf("O valor de %.2f foi descontado do saldo\n", valorD);
+                }
             }
             else if (opcao == 3){
-                System.out.println("Aqui fica o extrato:");
+                for (int i = 0; i < contador; i++){
+                    System.out.println(extrato[i]);
+                }
             }
             else if (opcao == 4){
                 System.out.println("O saldo atual é de: " + saldo);
             }
         }
-        }
-
     }
+
+}

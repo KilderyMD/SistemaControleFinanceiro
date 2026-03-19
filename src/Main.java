@@ -11,16 +11,16 @@ public class Main {
         int contador = 0;
 
         while (opcao != 5){
-            System.out.println("===================================");
+            System.out.println("====================================");
             System.out.println("Assistente Financeiro do Java");
-            System.out.println("===================================");
+            System.out.println("====================================");
             System.out.println("Menu de Opções: ");
             System.out.println("1 - Adicionar Receita");
             System.out.println("2 - Adicionar Despesa");
             System.out.println("3 - Ver Extrato");
             System.out.println("4 - Ver Saldo");
             System.out.println("5 - Sair");
-            System.out.println("===================================");
+            System.out.println("====================================");
             System.out.println("Selecione uma das opções acima: ");
             opcao = sc.nextInt();
 
